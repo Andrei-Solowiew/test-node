@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<style>
+		body {
+			max-width: 330px;
+			height: 480px;
+			margin: 50px auto;
+			padding: 10px 10px 20px 10px;
+			box-sizing: border-box;
+			border: 2px solid #000;
+			border-radius: 5%;
+			font-size: 16px;
+		}
+		/* button {
+	font-size: 18px;
+} */
+
+		.main {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			max-height: 454px;
+			overflow: scroll;
+			overflow-x: hidden;
+			flex-direction: column;
+		}
+
+		.main__link {
+			display: block;
+			width: 100%;
+		}
+
+		.main__link-btn {
+			padding: 15px 0;
+			width: 100%;
+			font-size: 20px;
+			cursor: pointer;
+		}
+
+		.main__emptiness {
+			height: 350px;
+		}
+
+		.modal {
+			display: none;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			width: 310px;
+			height: 450px;
+			background-color: rgba(128, 128, 128, 0.9);
+		}
+
+		.modal-p {
+			color: white;
+			font-size: 25px;
+			max-width: 200px;
+			text-align: center;
+		}
+
+		.modal-btn {
+			cursor: pointer;
+		}
+		@media (max-height: 600px) {
+			body {
+				margin: 0 auto;
+			}
+		}
+	</style>
+	<body>
+		<div class="main">
+			<a class="main__link" href="/theory-empty">
+				<button class="main__link-btn">Тема.1 "<%= themes[0].Name %>"</button>
+			</a>
+			<a class="main__link" href="/theory2">
+				<button class="main__link-btn">Тема.2 "<%= themes[1].Name %>"</button>
+			</a>
+			<a class="main__link" href="/theory-empty">
+				<button class="main__link-btn">Тема.3 "<%= themes[2].Name %>"</button>
+			</a>
+			<a class="main__link" href="theory.ejs">
+				<button class="main__link-btn">Тема.4 "<%= themes[3].Name %>"</button>
+			</a>
+			<a class="main__link" href="theory.ejs">
+				<button class="main__link-btn">Тема.5 "<%= themes[4].Name %>"</button>
+			</a>
+			<a class="main__link" href="theory.ejs">
+				<button class="main__link-btn">Тема.6 "<%= themes[5].Name %>"</button>
+			</a>
+			<a class="main__link" href="theory.ejs">
+				<button class="main__link-btn">Тема.7 "<%= themes[6].Name %>"</button>
+			</a>
+			<a class="main__link" href="theory.ejs">
+				<button class="main__link-btn">Тема.8 "<%= themes[7].Name %>"</button>
+			</a>
+			<div class="main__emptiness"></div>
+		</div>
+
+		<script src="modal.js"></script>
+	</body>
+</html>
